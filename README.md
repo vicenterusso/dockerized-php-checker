@@ -1,6 +1,6 @@
 # PHP Compatibility Checker Docker
 
-Docker-based tool for checking PHP code compatibility across different PHP versions.
+Docker-based tool for effortlessly checking PHP code compatibility across multiple PHP versions.
 
 ## Description
 
@@ -11,6 +11,8 @@ This project provides a Dockerized environment for running PHP Compatibility Che
 - Docker
 
 ## Usage
+
+### Option 1: Building the image locally
 
 1. Clone this repository:
    ```
@@ -28,7 +30,15 @@ This project provides a Dockerized environment for running PHP Compatibility Che
    docker run --rm -v /path/to/your/project:/project -e PHP_VERSION_MIN=5.6 -e PHP_VERSION_MAX=8.2 php-compatibility-checker
    ```
 
-   Replace `/path/to/your/project` with the actual path to your PHP project's root directory.
+### Option 2: Using the pre-built image from DockerHub
+
+You can directly use the pre-built image from DockerHub without cloning the repository or building the image locally:
+
+```
+docker run --rm -v /path/to/your/project:/project -e PHP_VERSION_MIN=5.6 -e PHP_VERSION_MAX=8.2 vicenterusso/php-checker:latest
+```
+
+Replace `/path/to/your/project` with the actual path to your PHP project's root directory.
 
 ## Customizing PHP Versions
 
